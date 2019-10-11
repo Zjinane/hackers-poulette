@@ -16,7 +16,7 @@ return $is;
 }
 
 
-$name = $_POST['name'];
+$name = $_POST['nam'];
 $prenom = $_POST['prenom']; 
 $message = $_POST['message'];
 $email = $_POST['email'];
@@ -99,7 +99,7 @@ mail($emailok,$subject,$txt,$headers);
 	<form action="" method="post" accept-charset="utf-8">
 		<section class=" form-row "  title="Formulaire nom et prenom">	
 			<label  for="name">Entrez votre nom </label>
-			<input class="form-control" name="name" type="text" id="name" maxlength="10" placeholder ="Dupont" /><?php 
+			<input class="form-control" name="nam" type="text" id="name" maxlength="10" placeholder ="Dupont" /><?php 
 				if($name != nettoyage($name) and ok($name)){
 					echo error('Nom incorrect','Erreur');
 					} else{ $name = $nameok;}
@@ -186,6 +186,20 @@ mail($emailok,$subject,$txt,$headers);
 		<button  class="btn btn-info btn-lg  " title="button d'envois" name="envoyer" type="submit">Envoyer</button>
 
 	</form>
+
+
+
+
+   <!-- H o n e y p o t -->
+
+<form class="honey">
+    <label class="honey" for="name">Your Name</label>
+    <input class="honey" type="text" id="name" name="name" placeholder="Your name here" required maxlength="100">
+    <label class="honey" for="email">Your E-mail</label>
+    <input class="honey" type="email" id="email" name="email" placeholder="Your e-mail here" required>
+</form>
+
+
 </section>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
