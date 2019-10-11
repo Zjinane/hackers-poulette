@@ -112,14 +112,14 @@ mail($emailok,$subject,$txt,$headers);
 
 		<section name="genre" class=" form-row" title="Formulaire Choisir un genre">
 				<section class="col-4 form-check form-check-inline" > 	
-					<input class="form-check-input" id="homme" type="radio" value="homme" /> Homme<?php 
+					<input class="form-check-input" id="homme" type="radio" value="homme" required/> Homme<?php 
 						if(isset($genre)){
 							$genre = $genreh;
 						}
 						?>
 				</section>
 				<section class="form-row">
-					<input class="form-check-input" id="femme" type="radio" value="femme" /> Femme<?php 
+					<input class="form-check-input" id="femme" type="radio" value="femme" required/> Femme<?php 
 					if(isset($genre)){
 						$genre = $genref;
 						}
@@ -129,7 +129,7 @@ mail($emailok,$subject,$txt,$headers);
 
 		<section class="form-row" >
 			<label for="mail" title="Formulaire e-mail"  >Entrez votre e-mail</label>
-			<input  class="form-control " name="email"  id="mail" placeholder="Jhony@hotmail.com"/><?php 
+			<input  class="form-control " name="email"  id="mail" placeholder="Jhony@hotmail.com" required/><?php 
 				if($email != filter_var($email, FILTER_SANITIZE_EMAIL)){
 					echo error('E-mail incorrect','Erreur');
 					}else{ $email = $emailok; }
@@ -147,7 +147,7 @@ mail($emailok,$subject,$txt,$headers);
 		
 		<section class="form-row">
 			<label for="pays" name="pays" title="Formulaire selectionnée pays">Dans quel pays habitez-vous ?</label><br />
-			<select class="form-control" id="pays">
+			<select class="form-control" id="pays" required>
 			<option value="france">France</option>
 			<option value="espagne">Espagne</option>
 			<option value="italie">Italie</option>
@@ -160,7 +160,7 @@ mail($emailok,$subject,$txt,$headers);
 		</section>
 
 		<section class="form-row">
-			<textarea  class="form-control" name="message" rows="10" cols="40" maxlength="50" title="texte message a Envoyer" placeholder="Ecrivez nous un message ici"></textarea><?php 
+			<textarea  class="form-control" name="message" rows="10" cols="40" maxlength="50" title="texte message a Envoyer" placeholder="Ecrivez nous un message ici" required></textarea><?php 
 				if($message != stripslashes(htmlspecialchars(strip_tags($message)))){
 					echo error('Message incorrect','Erreur');
 					}else{ $message = $messageok; }
