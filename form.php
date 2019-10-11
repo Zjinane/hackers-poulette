@@ -50,10 +50,26 @@ $email = $_POST['email'];
 //}
 
 
-$pays = isset($_POST['pays']);
-$produit = isset($_POST['produit']);
 
-if($nameok && $prenomok ){}
+//if(empty($nameok)){
+ 
+//echo '<div>"Merci"</div>';
+//}
+
+
+
+$subject = 'Merci pour votre inscription';
+$txt = 'Bonjour'.$prenomok .$nomok.'Votre demande est envoyer' ;
+$headers = 'zekji@hotmail.com';
+
+mail($emailok,$subject,$txt,$headers);
+
+
+
+
+
+
+
 
 ?>
 
