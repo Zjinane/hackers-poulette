@@ -64,7 +64,7 @@ $submit = $_POST['envoyer'];
 
 $subject = 'Merci pour votre inscription';
 $txt = 'Bonjour'.$prenomok .$nomok.'Votre demande est envoyer' ;
-$headers = 'zekji@hotmail.com';
+$headers = 'poulette@hotmail.com';
 
 mail($emailok,$subject,$txt,$headers);
 
