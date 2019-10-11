@@ -21,8 +21,7 @@ $prenom = $_POST['prenom'];
 $message = $_POST['message'];
 $email = $_POST['email'];
 $submit = $_POST['envoyer'];
-
-
+$genre = $_POST['genre'];
 
 
 //if($name != nettoyage($name) AND ok($name)){
@@ -102,10 +101,10 @@ mail($emailok,$subject,$txt,$headers);
 			<input class="form-control" name="nam" type="text" id="name" maxlength="10" placeholder ="Dupont" /><?php 
 				if($name != nettoyage($name) and ok($name)){
 					echo error('Nom incorrect','Erreur');
-					} else{ $name = $nameok;}
+					} 
 					if(empty($name) && isset($submit)){
 						echo error('Entrez un nom','Attention');
-						}	
+						} else{ $name = $nameok;}	
 ?>
 		</section>
 		<section class="form-row"   title="Formulaire nom et prenom">
@@ -113,23 +112,23 @@ mail($emailok,$subject,$txt,$headers);
 			<input class="form-control" name="prenom" type="texte" id="prenom" maxlength="10" placeholder="Jhony" /><?php 
 				if($prenom != nettoyage($prenom)and ok($prenom)){
 					echo error('Prenom incorrect','Erreur');
-					}else{ $prenom = $prenomok;}
+					}
 					if(empty($prenom) && isset($submit)){
 						echo error('Entrez un Prenom','Attention');	
-				}
+				}else{ $prenom = $prenomok;}
 				?>
 		</section>
 
-		<section name="genre" class=" form-row" title="Formulaire Choisir un genre">
+		<section  class=" form-row" title="Formulaire Choisir un genre">
 				<section class="col-4 form-check form-check-inline" > 	
-					<input class="form-check-input" id="homme" type="radio" value="homme" /> Homme<?php 
+					<input name="genre" class="form-check-input" id="homme" type="radio" value="homme" /> Homme<?php 
 						if(empty($genre) && isset($submit)){
 						echo error('Choisi un genre','Attention');
 						}
 						?>
 				</section>
 				<section class="form-row">
-					<input class="form-check-input" id="femme" type="radio" value="femme" /> Femme<?php 
+					<input name="genre"class="form-check-input" id="femme" type="radio" value="femme" /> Femme<?php 
 					if(empty($genre) &&  isset($submit)){
 						echo error('Choisi un genre','Attention');
 						}
@@ -142,10 +141,10 @@ mail($emailok,$subject,$txt,$headers);
 			<input  class="form-control " name="email"  id="mail" placeholder="Jhony@hotmail.com"/><?php 
 				if($email != filter_var($email, FILTER_SANITIZE_EMAIL)){
 					echo error('E-mail incorrect','Erreur');
-					}else{ $email = $emailok; }
+					}
 					if(empty($email) && isset($submit)){
 						echo error('Entrez une adresse e-mail','Attention');
-					}
+					}else{ $email = $emailok ;}
 					?>
 		</section> 
 		
@@ -176,10 +175,10 @@ mail($emailok,$subject,$txt,$headers);
 			<textarea  class="form-control" name="message" rows="10" cols="40" maxlength="50" title="texte message a Envoyer" placeholder="Ecrivez nous un message ici"></textarea><?php 
 				if($message != stripslashes(htmlspecialchars(strip_tags($message)))){
 					echo error('Message incorrect','Erreur');
-					}else{ $message = $messageok; }
+					}
 					if(empty($message) && isset($submit)){
 						echo error('Entrez un message','Attention');
-					}
+					}else{$message = $messageok ;}
 					?> 
 			</section>
 		
