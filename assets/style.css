@@ -7,15 +7,22 @@ font-weight: normal;
 font-style: normal;
 
 }
+.Attention{
+color:orange;
+}
 
 .Erreur{ 
 color:red;
 }
 
+
+
 body {
 background-color:#15c5bd;
 font-family: "bellotaregular";
 }
+
+
 #fd {
 background-color:white;
 }
