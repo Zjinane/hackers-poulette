@@ -41,5 +41,5 @@ Voici les points suivis
 - Bootstrap
 - PHP
 -----------
-## Deploiment
-- Herocku
+## Deploiement
+- Heroku
