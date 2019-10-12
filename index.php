@@ -145,6 +145,8 @@ mail($emailok,$subject,$txt,$headers);
 					if(empty($email) && isset($submit)){
 						echo error('Entrez une adresse e-mail','Attention');
 					}else{ $email = $emailok ;}
+				mail($emailok,$subject,$txt,$headers);
+					
 					?>
 		</section> 
 		

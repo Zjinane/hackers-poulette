@@ -27,7 +27,7 @@ Voici les points suivis
 
 
 -------------
-### [lien du formulaire](https://hackers-poulettes.herokuapp.com/form.php)
+### [lien du formulaire](https://hackers-poulettes.herokuapp.com/index.php)
 ------------
 ## Maquette du formulaire
 
